@@ -59,6 +59,3 @@ select  id, st_area(st_buffer(geom, 5))
 from objects
 where ST_HasArc(geom) = false
 order by id;
-
-select ST_Area(ST_Buffer(geom, 5)) from objects o
-where ST_HasArc(ST_LineToCurve(geom));
